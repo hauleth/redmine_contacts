@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/repository/!svn/ver/68/redmine/redmine_contacts/trunk/app/helpers
+END
+contacts_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/repository/!svn/ver/68/redmine/redmine_contacts/trunk/app/helpers/contacts_helper.rb
+END
+deals_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/repository/!svn/ver/31/redmine/redmine_contacts/trunk/app/helpers/deals_helper.rb
+END
+notes_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/repository/!svn/ver/19/redmine/redmine_contacts/trunk/app/helpers/notes_helper.rb
+END

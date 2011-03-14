@@ -1,0 +1,18 @@
+contact_one:
+    id: 1
+    first_name: Ivan
+    last_name: Ivanov
+    middle_name: Ivanovich
+
+contact_two:
+    id: 2
+    first_name: Marat
+    last_name: Aminov
+    middle_name: Ivanovich
+    job_title: director
+    company: Domoway
+    tag_names: 'one, two, three, four'
+    email: marat@mail.ru
+    skype: marat_aminov
+    notes: Marat is a famous writer an reader
+ 

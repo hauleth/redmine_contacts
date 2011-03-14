@@ -1,0 +1,34 @@
+<% content_for(:header_tags) do %>
+  <%= stylesheet_link_tag :contacts, :plugin => 'redmine_contacts' %>
+<% end %>
+
+<% content_for :sidebar do %>   
+	<%= render :partial => 'common/sidebar' %>
+
+<% end %>
+
+<div class="contextual">
+  <%= link_to_if_authorized l(:label_deal_new), {:controller => 'deals', :action => 'new', :project_id => @project}, :class => 'icon icon-add' %>
+</div>
+
+<h2><%=  l(:label_deal_plural) %></h2>     
+
+<% unless true %>
+<% form_tag({:project_id => @project}, :id => 'query_form') do %>        
+
+<fieldset id="filters" class="collapsible collapsed">
+	<legend onclick="toggleFieldset(this);"><%= l(:label_filter_plural) %></legend>
+	<div style="display: none;">
+		<%= select :deal, :status_id, options_for_select(collection_for_status_select), {:include_blank => true}, :onchange => "this.form.submit();" %>
+	</div>
+</fieldset>                                                                             
+<% end %>  
+<% end %>
+                                                                                        
+
+<div id="deal_list">  
+	<%= render :partial => 'list' %>
+</div>
+
+<% html_title l(:label_deal_plural) %>   
+

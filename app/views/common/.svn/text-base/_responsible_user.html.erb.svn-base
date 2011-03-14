@@ -1,0 +1,11 @@
+  <% 	if responsible_user.assigned_to %> 
+	<h3><%= l(:label_assigned_to) %></h3>  
+	<div id="responsible_user">       
+	<ul>
+	   <li> 	
+	<%= avatar(responsible_user.assigned_to, :size => "16").to_s + link_to_user(responsible_user.assigned_to, :class => 'user').to_s  %>
+	   </li>
+	</ul>
+    </div>
+    <% end %>
+                

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/repository/!svn/ver/1/redmine/redmine_contacts/trunk/test/fixtures
+END
+taggings.yml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/repository/!svn/ver/1/redmine/redmine_contacts/trunk/test/fixtures/taggings.yml
+END
+deals.yml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/repository/!svn/ver/1/redmine/redmine_contacts/trunk/test/fixtures/deals.yml
+END
+notes.yml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/repository/!svn/ver/1/redmine/redmine_contacts/trunk/test/fixtures/notes.yml
+END
+contacts_issues.yml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/repository/!svn/ver/1/redmine/redmine_contacts/trunk/test/fixtures/contacts_issues.yml
+END
+contacts.yml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/repository/!svn/ver/1/redmine/redmine_contacts/trunk/test/fixtures/contacts.yml
+END
+tags.yml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/repository/!svn/ver/1/redmine/redmine_contacts/trunk/test/fixtures/tags.yml
+END

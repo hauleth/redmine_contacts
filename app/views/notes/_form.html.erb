@@ -1,0 +1,26 @@
+<%= error_messages_for 'note' %>      
+
+<% if !ajax_form %>
+<span id="new_note_form_subject" >
+	<p>
+	  <%= f.text_field :created_on, :size => 15, :value => Date.current %><%= calendar_for "note_created_on" %>
+	</p>
+</span>             
+<% end %>
+<%= f.text_area :content, :rows => 6, :class => 'wiki-edit' %>  
+
+<% if !ajax_form %>
+<span id="new_note_form_extras" > 
+		<span id="note_attachments_fields">
+		<%= file_field_tag 'note_attachments[1][file]', :size => 30, :id => nil  %>  
+		<%= text_field_tag 'attachments[1][description]', '', :size => 60, :id => nil %>
+	   
+		</span>
+		<br />
+		<small><%= link_to l(:label_add_another_file), '#', :onclick => 'addNoteFileField(); return false;' %>
+		(<%= l(:label_max_size) %>: <%= number_to_human_size(Setting.attachment_max_size.to_i.kilobytes) %>)
+		</small> 
+	<br />
+	<br /> 
+</span>   
+<% end %>

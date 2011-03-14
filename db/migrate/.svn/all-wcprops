@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/repository/!svn/ver/65/redmine/redmine_contacts/trunk/db/migrate
+END
+009_create_taggings.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/repository/!svn/ver/61/redmine/redmine_contacts/trunk/db/migrate/009_create_taggings.rb
+END
+015_add_assigned_to_to_contact_and_deal.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/repository/!svn/ver/15/redmine/redmine_contacts/trunk/db/migrate/015_add_assigned_to_to_contact_and_deal.rb
+END
+002_add_customer_fields.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/repository/!svn/ver/44/redmine/redmine_contacts/trunk/db/migrate/002_add_customer_fields.rb
+END
+004_rename_customer_status_field.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/repository/!svn/ver/1/redmine/redmine_contacts/trunk/db/migrate/004_rename_customer_status_field.rb
+END
+005_add_fields_to_customer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/repository/!svn/ver/1/redmine/redmine_contacts/trunk/db/migrate/005_add_fields_to_customer.rb
+END
+018_change_tags_tables.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/repository/!svn/ver/61/redmine/redmine_contacts/trunk/db/migrate/018_change_tags_tables.rb
+END
+011_add_job_title_to_customer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/repository/!svn/ver/28/redmine/redmine_contacts/trunk/db/migrate/011_add_job_title_to_customer.rb
+END
+001_create_customers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/repository/!svn/ver/1/redmine/redmine_contacts/trunk/db/migrate/001_create_customers.rb
+END
+013_create_deals.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/repository/!svn/ver/61/redmine/redmine_contacts/trunk/db/migrate/013_create_deals.rb
+END
+006_add_avatar_to_customer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/repository/!svn/ver/1/redmine/redmine_contacts/trunk/db/migrate/006_add_avatar_to_customer.rb
+END
+014_create_notes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/repository/!svn/ver/61/redmine/redmine_contacts/trunk/db/migrate/014_create_notes.rb
+END
+017_rename_created_at_fields.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/repository/!svn/ver/43/redmine/redmine_contacts/trunk/db/migrate/017_rename_created_at_fields.rb
+END
+012_add_is_company_to_customers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/repository/!svn/ver/1/redmine/redmine_contacts/trunk/db/migrate/012_add_is_company_to_customers.rb
+END
+003_create_customer_statuses.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/repository/!svn/ver/1/redmine/redmine_contacts/trunk/db/migrate/003_create_customer_statuses.rb
+END
+010_add_color_to_tag.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/repository/!svn/ver/1/redmine/redmine_contacts/trunk/db/migrate/010_add_color_to_tag.rb
+END
+019_create_contacts_projects.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/repository/!svn/ver/65/redmine/redmine_contacts/trunk/db/migrate/019_create_contacts_projects.rb
+END
+016_add_status_to_deal.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/repository/!svn/ver/32/redmine/redmine_contacts/trunk/db/migrate/016_add_status_to_deal.rb
+END
+008_create_tags.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/repository/!svn/ver/61/redmine/redmine_contacts/trunk/db/migrate/008_create_tags.rb
+END
+007_add_notes_to_customer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/repository/!svn/ver/1/redmine/redmine_contacts/trunk/db/migrate/007_add_notes_to_customer.rb
+END

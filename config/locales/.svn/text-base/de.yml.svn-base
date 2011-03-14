@@ -1,0 +1,101 @@
+de:
+  contacts_title: Kontakte
+
+  label_contacts_view_all: Alle Kontakte anzeigen
+  label_contact_files: Dateien
+  label_task_plural: Aufgaben
+  label_contact_background_info: Hintergrundinformationen
+  label_contact: Person
+  label_company: Firma   
+  label_contact_plural: Kontaktliste   
+  label_contact_information: Kontaktinformation
+  label_contact_edit_information: Kontaktinformation editieren
+  label_edit_tags: Tags editieren
+  label_contact_view: Anzeigen
+  label_contact_list: Auflisten
+  label_contact_new: Neu
+  label_at_company: bei
+  label_last_notes: Letzte Anmerkungen
+  label_tags_plural: Tags            
+  label_multi_tags_plural: Select multilpe tags
+  label_single_tag_mode: Single tag
+  label_multiple_tags_mode: Multiple tags
+  label_contact_tag: Tag
+  label_time_ago: her
+  label_add_note_plural: Anmerkung hinzufügen
+  label_note_plural: Anmerkungen
+  label_company_employees: Angestellte
+  label_add_tags_rule: Mit Kommata trennen
+  label_search: Nach Namen suchen
+  label_note_for: Anmerkung für
+  label_show_on_map: Auf Karte anzeigen
+  label_add_another_phone: Telefon hinzufügen
+  label_contact_note_plural: Alle Anmerkungen
+  label_remove: löschen       
+  label_related_contacts: Verwandte Kontakte
+  label_assigned_to: Verantwortlich 
+  label_issue_added: Issue added
+  label_add_emails_rule: durch Komma separieren
+  label_add_phones_rule: durch Komma separieren
+
+  label_note_show_extras: Erweiterte Optionen (Dateien, Datum)
+  label_note_hide_extras: Erweiterte Optionen ausblenden
+  label_note_added: Die Anmerkung wurde hinzugefügt
+
+  label_deal_plural: Auftrag
+  label_contractor_plural: Auftragspartner
+  label_deal: Auftrag
+  label_deal_new: Neuer Auftrag
+  label_deal_edit_information: Auftragsinformationen editieren    
+  label_deal_change_status: Change status 
+  label_deal_pending: Pending
+  label_deal_won: Won
+  label_deal_lost: Lost 
+  
+
+  field_note_date: Datum der Anmerkung
+
+  field_deal_name: Name
+  field_deal_background: Hintergrundinformation
+  field_deal_contact: Kontakt
+  field_deal_price: Preis
+  field_price: Preis
+
+  field_contact_avatar: Avatar
+  field_contact_is_company: Firma
+  field_contact_name: Name
+  field_contact_last_name: Nachname
+  field_contact_first_name: Vorname
+  field_contact_middle_name: Zwischenname
+  field_contact_job_title: Berufsbezeichnung
+  field_contact_company: Firma
+  field_contact_address: Adresse
+  field_contact_phone: Telefon
+  field_contact_email: Email
+  field_contact_website: Website
+  field_contact_skype: Skype
+  field_contact_status: Status   
+  field_contact_background: Hintergrundinformationen
+  field_contact_tag_names: Tags     
+  field_first_name: Name
+  field_last_name: Nachname
+  field_company: Firma
+  field_birthday: Geburtstag
+  field_contact_department: Abteilung
+
+  field_company_field: Industrie
+
+  button_add_note: Anmerkung hinzufügen
+  notice_successful_save: Gespeichert
+  notice_successful_add: Erfolgreich hinzugefüg
+  notice_unsuccessful_save: Konnte nicht gespeichert werden
+  
+  project_module_contacts_module: Kontakte
+  
+  permission_view_contacts: Kontakte anzeigen  
+  permission_edit_contacts: Kontakte editieren 
+  permission_delete_contacts: Kontakte löschen
+  permission_view_deals: Auftrag anzeigen
+  permission_edit_deals: Auftrag editieren
+  permission_delete_deals: Auftrag löschen   
+  permission_add_notes: Anmerkungen anzeigen     

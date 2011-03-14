@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/repository/!svn/ver/1/redmine/redmine_contacts/trunk/test/functional
+END
+deals_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/repository/!svn/ver/1/redmine/redmine_contacts/trunk/test/functional/deals_controller_test.rb
+END
+notes_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/repository/!svn/ver/1/redmine/redmine_contacts/trunk/test/functional/notes_controller_test.rb
+END

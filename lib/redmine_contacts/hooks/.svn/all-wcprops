@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/repository/!svn/ver/65/redmine/redmine_contacts/trunk/lib/redmine_contacts/hooks
+END
+show_issue_contacts_hook.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/repository/!svn/ver/65/redmine/redmine_contacts/trunk/lib/redmine_contacts/hooks/show_issue_contacts_hook.rb
+END

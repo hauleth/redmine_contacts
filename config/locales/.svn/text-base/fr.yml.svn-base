@@ -1,0 +1,105 @@
+fr:
+  contacts_title: Contacts
+  
+  label_contacts_view_all: Voir tous les contacts
+  label_contact_files: Fichiers
+  label_task_plural: Tâches
+  label_contact_background_info: Informations / contexte
+  label_contact: Personne
+  label_company: Compagnie   
+  label_contact_plural: Liste des contacts   
+  label_contact_information: Information sur le contact
+  label_contact_edit_information: Edition des informations du contact
+  label_edit_tags: Editer les tags
+  label_contact_view: Voir
+  label_contact_list: Lister
+  label_contact_new: Nouveau
+  label_at_company: à
+  label_last_notes: Dernières notes
+  label_tags_plural: Tags     
+  label_multi_tags_plural: Select multilpe tags
+  label_single_tag_mode: Single tag
+  label_multiple_tags_mode: Multiple tags
+  label_contact_tag: Tag
+  label_time_ago: il y à
+  label_add_note_plural: Ajouter une note à  
+  label_note_plural: Notes
+  label_company_employees: Employés
+  label_add_tags_rule: séparés par des virgule
+  label_search: Rechercher par nom
+  label_note_for: Note pour
+  label_show_on_map: Afficher sur la carte   
+  label_add_another_phone: ajouter numéro de téléphone   
+  label_contact_note_plural: Toutes les notes  
+  label_remove: supprimer        
+  label_related_contacts: Contacts associés   
+  label_assigned_to: Responsible 
+  label_issue_added: Issue added
+  label_add_emails_rule: devide by commas
+  label_add_phones_rule: devide by commas
+   
+  label_note_show_extras: Avancés (fichiers, date)
+  label_note_hide_extras: Masquer avancés       
+  label_note_added: La note a été ajouté avec succès
+
+  label_deal_plural: Affaires
+  label_contractor_plural: Contacteurs
+  label_deal: Affaire     
+  label_deal_new: Nouvelle affaire
+  label_deal_edit_information: Editer affaire  
+  label_deal_change_status: Change status 
+  label_deal_pending: Pending
+  label_deal_won: Won
+  label_deal_lost: Lost 
+
+  field_note_date: Date de la note
+  
+  field_deal_name: Nom
+  field_deal_background: Contexte
+  field_deal_contact: Contact    
+  field_deal_price: Montant  
+  field_price: Montant  
+  
+  field_contact_avatar: Avatar
+  field_contact_is_company: Compagnie
+  field_contact_name: Nom
+  field_contact_last_name: Nom
+  field_contact_first_name: Prénom
+  field_contact_middle_name: Particule (exemple le R. de "James R. Smith")
+  field_contact_job_title: Métier
+  field_contact_company: Compagnie
+  field_contact_address: Adresse
+  field_contact_phone: Téléphone
+  field_contact_email: Email
+  field_contact_website: Site Web
+  field_contact_skype: Skype
+  field_contact_notes: Notes
+  field_contact_status: Statut   
+  field_contact_background: Contexte   
+  field_contact_tag_names: Tags
+  field_first_name: Name
+  field_last_name: Last name
+  field_company: Company 
+  field_birthday: Birthday 
+  field_contact_department: Department
+
+
+  field_deal_name: Nom
+  field_deal_decription: Description   
+  
+  field_company_field: Secteur d'activité
+  
+  button_add_note: Ajouter cette note
+  notice_successful_save: Sauvegardé avec succès
+  notice_successful_add: Ajouté avec succès
+  notice_unsuccessful_save: Impossible d'ajouter
+  
+  project_module_contacts_module: Contacts
+  
+  permission_view_contacts: Voir les contacts
+  permission_edit_contacts: Editer les contacts
+  permission_delete_contacts: Supprimer les contacts
+  permission_view_deals: Voir les affaires
+  permission_edit_deals: Editer les affaires
+  permission_delete_deals: Supprimer les affaires 
+  permission_add_notes: Add notes   

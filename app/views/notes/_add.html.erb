@@ -1,0 +1,24 @@
+	<div class="add-note">  
+	   <p><strong><%=l(:label_add_note_plural)%> </strong></p> 
+		
+	   <div id="add_ajax_node">
+	   	  <% remote_form_for(:note, @note, :url =>  {:action => 'add_note', :id => note_source, :project_id => note_source.project}, :html => {:id => "add_note_form"}) do |f| %> 
+			<%= render :partial => 'notes/form', :locals => {:f => f, :ajax_form => true}  %>     
+			<%= submit_tag l(:button_add_note) %>
+		  <% end %>   
+			 <div style="float:right;">
+					<%= link_to l(:label_note_show_extras), {}, :onclick => "Element.toggle('add_html_node'); Element.toggle('add_ajax_node'); $('add_html_node').down('.wiki-edit').value = $('add_ajax_node').down('.wiki-edit').value; return false;", :id => 'show_note_form_extras' %>
+				</div>
+	   </div>   
+	
+	   <div id="add_html_node"  style = "display:none;"> 
+		
+		<% form_for(:note, @note, :url =>  {:action => 'add_note', :id => note_source, :project_id => note_source.project}, :html => {:multipart => true, :id => "add_note_form"}) do |f| %> 
+			<%= render :partial => 'notes/form', :locals => {:f => f, :ajax_form => false}  %>     
+			<%= submit_tag l(:button_add_note) %>
+		<% end %>    
+		<div style="float:right;">
+			<%= link_to l(:label_note_hide_extras), {}, :onclick => "Element.toggle('add_html_node'); Element.toggle('add_ajax_node'); $('add_ajax_node').down('.wiki-edit').value = $('add_html_node').down('.wiki-edit').value; return false;", :id => 'hide_note_form_extras' %>
+		</div>
+	   </div> 
+	</div>

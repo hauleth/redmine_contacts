@@ -1,0 +1,125 @@
+<%= error_messages_for 'contact', 'note' %>  
+
+<div class="contextual">     
+	<% replace_watcher ||= 'watcher' %> 
+	<%= watcher_tag(@contact, User.current, {:id => replace_watcher, :replace => ['watcher','watcher2']}) %>  
+	<%= link_to_if_authorized l(:button_edit), {:controller => 'contacts', :action => 'edit', :project_id => @contact.projects.first, :id => @contact}, :class => 'icon icon-edit' unless @contact.nil? %> 
+	<%= link_to_if_authorized l(:button_delete), {:controller => 'contacts', :action => 'destroy', :project_id => @contact.projects.first, :id => @contact}, :confirm => l(:text_are_you_sure), :method => :post, :class => 'icon icon-del' unless @contact.nil? %>
+</div>
+
+<h2><%= if !@contact.is_company then l(:label_contact) else l(:label_company) end %> #<%= @contact.id %></h2>
+<% unless @contact.nil? -%>
+<div class="contact details">
+	<table class="subject_header">
+		<tr>
+			<td class="avatar"><%= avatar_to(@contact, :size => "64", :full_size => true) %></td>
+			<td class="name" style="vertical-align: top;">
+				<h1><%= h @contact.name %></h1>
+				<% if !@contact.is_company %>
+				<p>
+				<%= h @contact.job_title %>
+				<%= " #{l(:label_at_company)} " unless (@contact.job_title.blank? or @contact.company.blank?) %> 
+				<% if @company %>
+					<%= link_to @company.name, {:controller => 'contacts', :action => 'show', :project_id => @project, :id => @company.id } %>
+				<% else %>
+					<%= h @contact.company %> 
+				<% end %>
+				</p>
+				<% end %>
+				<div id="tags_data">
+					<span class="tags">
+						<%= render :partial => 'tags_item', :collection => @contact.tags, :locals => {:is_note => false} %>
+					</span>
+					<% if authorize_for('contacts', 'edit_tags') %>
+					<span class="contextual">
+						<%= link_to l(:label_edit_tags), {}, :onclick => "Element.show('edit_tags_form'); Element.hide('tags_data');  return false;", :id => 'edit_tags_link' %>
+					</span>
+					<% end %>
+				</div>
+				<% form_tag( {:controller => 'contacts', 
+									 :action => 'edit_tags', 
+									 :project_id => @project, 
+									 :id => @contact }, 
+						     :multipart => true, 
+							 :id => "edit_tags_form", 
+							 :style => "display:none; size: 100%" ) do %>
+					<%= text_field :contact, :tag_list, :size => 50, :label => :tag_names  %>
+					<%= submit_tag l(:button_save) %>
+					<%= link_to l(:button_cancel), {}, :onclick => "Element.hide('edit_tags_form'); Element.show('tags_data'); return false;" %>
+					<br>
+					<small>
+					(<%= l(:label_add_tags_rule) %> )
+					</small>
+				<% end %>
+			</td>   
+			<% if @contact.phones.any? or @contact.emails.any? %>
+			<td class="subject_info">
+				<ul>
+					<% if @contact.phones.any? %>
+					<li class="phone icon icon-phone"><%=  @contact.phones.first %></li>
+					<% end %>
+
+					<% if @contact.emails.any? %>
+					<li class="email icon icon-email"><%= mail_to @contact.emails.first %></li>
+					<% end %>
+				</ul>
+			</td>
+			<% end %>
+		</tr>
+	</table>
+	
+	<% if authorize_for('contacts', 'add_note') %>   
+	<hr />
+	<%= render :partial => 'notes/add', :locals => {:note_source => @contact} %>
+	<% end %>
+</div>
+
+<div id="comments">
+	<h3><%= l(:label_note_plural) %></h3>
+	<div id="notes">  
+		<%= render :partial => 'notes/note_item', :collection => @notes, :locals => {:show_info => @contact.is_company, :note_source => @contact} %>
+		<p class="pagination"><%= pagination_links @notes_pages, :params => {:project_id => params[:project_id]}%></p>   
+	</div>
+</div>
+
+<% else %>
+<p class="nodata"><%=l(:label_no_data)%></p>
+<% end %>
+
+<% content_for :sidebar do %>
+	<%= render :partial => 'common/sidebar' %>   
+
+    <%= render :partial => 'attributes' %>
+    
+  	<%= render :partial => 'common/responsible_user', :object => @contact %>
+
+	<%= render :partial => 'related_issues' %>
+	
+	<%= render :partial => 'common/notes_attachments', :object => @contact_attachments %>    
+	
+	<%= render :partial => 'deals/related_deals', :object => @contact.deals %>  
+	
+	<% if @contact.is_company %> 
+		<div id="employee">
+			
+		<div class="contextual">
+			<%= link_to_if_authorized l(:label_add_employee), {:controller => 'contacts', :action => 'new', :project_id => @contact.project, :company_name => @contact.name} %>
+		</div>
+	    <h3><%= l(:label_company_employees) %></h3>
+		<%= render :partial => 'common/related_contacts', :object => @employees %>  
+		</div>
+		
+    <% end %>      
+
+    <h3><%= l(:label_contact_background_info) %></h3>
+	<div class="wiki"><%= textilizable(@contact, :background) %></div>
+
+<% end %>
+
+<% html_title "#{l(:label_contact)} ##{@contact.id}: #{@contact.name}" %>    
+
+<% content_for :header_tags do %>
+<%= javascript_include_tag :defaults %>   
+<%= javascript_include_tag :contacts, :plugin => 'redmine_contacts'  %>
+<%= stylesheet_link_tag :contacts, :plugin => 'redmine_contacts' %>
+<% end %>

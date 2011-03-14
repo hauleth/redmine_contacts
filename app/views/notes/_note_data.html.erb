@@ -1,0 +1,15 @@
+<table class="note_data">
+	<tr>
+		<td class="avatar"><%= link_to avatar_to(note_data.source, :size => "32"), note_source_url(note_data.source), :id => "avatar" %></td>
+		<td class="name">
+			<h4>
+				<%= link_to_source note_data.source %>,
+				<%= time_tag(note_data.created_on) %> 
+				<%= l(:label_time_ago) %>
+			</h4>
+			<div class="wiki">
+				<%= textilizable(truncate(note_data.content, limit)) %>
+			</div>
+		</td>
+	</tr>
+</table>  

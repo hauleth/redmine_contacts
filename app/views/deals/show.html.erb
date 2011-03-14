@@ -1,0 +1,82 @@
+<%= error_messages_for 'deal', 'note' %>    
+
+<div class="contextual">   
+	<% replace_watcher ||= 'watcher' %> 
+	<%= watcher_tag(@deal, User.current, {:id => replace_watcher, :replace => ['watcher','watcher2']}) %>  
+	<%= link_to_if_authorized l(:button_edit), {:controller => 'deals', :action => 'edit', :project_id => @project, :id => @deal}, :class => 'icon icon-edit' unless @deal.nil? %>
+	<%= link_to_if_authorized l(:button_delete), {:controller => 'deals', :action => 'destroy', :project_id => @project, :id => @deal}, :confirm => l(:text_are_you_sure), :method => :post, :class => 'icon icon-del' unless @deal.nil? %>
+</div>
+
+<h2><%= l(:label_deal) %></h2>   
+<div class="deal details">   
+	
+	<table class="subject_header">
+		<tr>
+			<td class="avatar"><%= avatar_to(@deal, :size => "64") %></td>
+			<td class="name" style="vertical-align: top;">
+				<h1><%= h @deal.contacts.first.name + ": " if @deal.contacts.any? %> <%= @deal.name %></h1>  
+				<p><%= h number_to_currency(@deal.price) %></p>
+				<div id="deal-status">
+					<span class="deal-status" style = <%= "background-color:#{Deal::STATUSES[@deal.status_id][:color]};color:white;" %> >
+						<%= h @deal.status %> 
+					</span>
+					<% if authorize_for('deals', 'edit') %>
+					<span class="contextual">
+						<%= link_to l(:label_deal_change_status), {}, :onclick => "Element.show('edit_status_form'); Element.hide('deal-status');  return false;", :id => 'edit_status_link' %>
+					</span>
+					<% end %>
+				</div>
+				<% form_tag( {:controller => 'deals', 
+									 :action => 'update', 
+									 :project_id => @project, 
+									 :id => @deal }, 
+						     :multipart => true, 
+							 :id => "edit_status_form", 
+							 :style => "display:none; size: 100%" ) do %>
+					<%= select :deal, :status_id, options_for_select(collection_for_status_select, @deal.status_id), { :include_blank => false } %>
+					<%= submit_tag l(:button_save) %>
+					<%= link_to l(:button_cancel), {}, :onclick => "Element.hide('edit_status_form'); Element.show('deal-status'); return false;" %>
+					<br>
+			   
+				<% end %>
+			</td>
+		</tr>
+	</table>
+
+ 	<% if authorize_for('deals', 'add_note') %>
+	<hr />
+	<%= render :partial => 'notes/add', :locals => {:note_source => @deal} %>
+	<% end %>
+</div>
+
+<div id="comments">
+	<h3><%= l(:label_note_plural) %></h3>
+	<div id="notes">
+		<%= render :partial => 'notes/note_item', :collection => @deal.notes, :locals => {:show_info => true, :note_source => @deal} %>
+	</div>
+
+</div>
+
+<% content_for :sidebar do %>   
+    <%= render :partial => 'common/sidebar' %>    
+
+	<%= render :partial => 'common/responsible_user', :object => @deal %>  
+	
+    <h3><%= l(:label_contractor_plural) %></h3>     
+    <%= render :partial => 'common/related_contacts', :object => @deal.contacts %>
+
+	<%= render :partial => 'common/notes_attachments', :object => @deal_attachments %>    
+
+    <h3><%= l(:label_contact_background_info) %></h3>
+	<div class="wiki"><%= textilizable(@deal, :background) %></div>    
+
+
+<% end %>
+
+<% html_title "#{l(:label_deal)}: #{@deal.name}" %> 
+
+<% content_for :header_tags do %>
+<%= javascript_include_tag :defaults %>      
+<%= javascript_include_tag :contacts, :plugin => 'redmine_contacts' %>   
+<%= stylesheet_link_tag :contacts, :plugin => 'redmine_contacts' %>
+<% end %>

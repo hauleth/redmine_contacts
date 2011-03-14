@@ -1,0 +1,38 @@
+<% unless @contacts.empty? %>
+	<table class="index">
+	<tbody>
+    <% @contacts.each do |contact| %>  
+		<tr>
+			<td>
+				<div class="avatar_subject">
+					<%= link_to avatar_to(contact, :size => "32"), {:controller => 'contacts', :action => 'show', :project_id => contact.projects.first, :id => contact.id}, :project_id => "avatar" %>
+					<div class="info">
+						<h1><%= link_to contact.name, contact_url(contact) %></h1>
+						<h2>
+							<%= link_to h(contact.website), contact.website, :only_path => true unless !contact.is_company %>
+							<%= mail_to contact.emails.first unless contact.is_company%>
+							<div><%= contact.phones.first %></div>
+						</h2>
+					</div>
+				</div>
+			</td>
+			<td>
+				<div class="title_and_company" >
+					<%= h contact.job_title %>
+					<% if !contact.is_company %>
+						<%= " #{l(:label_at_company)} " unless (contact.job_title.blank? or contact.company.blank?) %> 
+						<%= h contact.company %> 
+					<% end %>
+				</div>
+				<div class="tags">
+					<%= render :partial => "tags_item", :collection => contact.tags, :locals => {:is_note => false}  %>
+				</div>
+			</td>
+		</tr>         
+    <% end %>
+	</tbody>
+  </table> 
+ 	<%= contacts_paginator @contacts_pages, :params => {:project_id => params[:project_id]} %>      
+<% else %>
+  <p class="nodata"><%=l(:label_no_data)%></p>
+<% end %>

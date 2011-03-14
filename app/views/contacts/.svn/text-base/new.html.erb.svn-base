@@ -1,0 +1,12 @@
+<h2><%= l(:label_contact_new) %></h2>
+
+<% labelled_tabular_form_for :contact, @contact, :url => {:action => 'create', :project_id => @project}, :html => { :multipart => true} do |f|  %> 
+  <%= render :partial => 'form', :locals => {:f => f}  %>
+  <%= submit_tag l(:button_save) -%>
+<% end -%>
+
+<% content_for(:header_tags) do %>
+  <style type="text/css">
+    .icon-users { background-image: url(../../images/users.png); }
+  </style>
+<% end %>

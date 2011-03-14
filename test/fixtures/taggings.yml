@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  tag_id: 1
+  container: contact_one
+  
+two:
+  tag_id: 2
+  container: contact_one
+  
+three:
+    tag_id: 2
+    container: contact_two
+ 

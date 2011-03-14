@@ -1,0 +1,6 @@
+<h2><%= l(:label_deal_edit_information) %></h2>
+
+<% labelled_tabular_form_for :deal, @deal, :url => {:action => 'update', :project_id => @project, :id => @deal} do |f|  %>
+  <%= render :partial => 'form', :locals => {:f => f}  %>
+  <%= submit_tag l(:button_save) -%>
+<% end -%>

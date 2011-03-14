@@ -1,0 +1,17 @@
+= Contacts plugin
+
+== Install
+
+* Copy redmine_contacts_plugin to vendor/plugins on your redmine path or
+ @svn co http://hgftr.ru/svn/repository/redmine/redmine_contacts/trunk/ redmine_contacts@
+* Run rake db:migrate_plugins RAILS_ENV=production   
+
+May be conflict with other tags realizations
+Conflicted with redmine_customer plugin
+
+== Uninstall
+
+<pre>
+rake db:migrate:plugin NAME=redmine_contacts VERSION=0 RAILS_ENV=production 
+rm -r vendor/plugins/redmine_contacts
+</pre>

@@ -1,0 +1,4 @@
+<% if notes_attachments.any? %>
+<h3><%= l(:label_attachment_plural) %></h3>      
+<%= render :partial => 'attachments/links', :locals => {:attachments => notes_attachments, :options  => {}} %>
+<% end %>

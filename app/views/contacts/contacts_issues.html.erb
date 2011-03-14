@@ -1,0 +1,37 @@
+<% content_for(:header_tags) do %>
+  <%= stylesheet_link_tag :contacts, :plugin => 'redmine_contacts' %>
+<% end %>
+
+<% content_for :sidebar do %>          
+	<%= render :partial => 'common/sidebar' %>
+<% end %>
+
+<h2><%=  l(:label_issue_plural) %></h2>    
+<% form_tag({:project_id => @project}, :id => 'query_form') do %>  
+<p>
+	<%= label_tag l(:label_assigned_to) %>
+	<%= select_tag :assigned_to, options_for_select(@users, params[:assigned_to]), :onchange => "this.form.submit();" %> 
+</p>
+<% end %>                                                                   
+
+<% unless @contacts_issues.empty? %>
+<table class="index" style="width:100%;">
+	<tbody>
+		<% @contacts_issues.select {|i| !i.closed?}.each do |issue| %>
+		<tr id=<%="issue_#{issue.id}"%>> 
+			<td style="vertical-align: top; padding-top: 4px; width: 12px;"> 
+				<%= check_box_tag :close, '', false, :onclick => "this.disable(); $('issue_#{issue.id}').style.textDecoration='line-through';" +  remote_function(:url => { :action => "close_issue", :project_id => @project, :issue_id => issue }, :with => "issue_#{issue.id}") if issue.assigned_to == User.current %>
+			</td>
+			<td style="vertical-align: top; padding-top: 4px; width:100%;">  
+    				<%= link_to issue.subject, :controller => :issues, :action => :show, :id => issue %>  
+					<strong><%= "(#{link_to_source issue.contacts.first})" %></strong>
+			</td>
+			<td style="vertical-align: top; text-align: right; width: 100px;"><%= format_date(issue.due_date) %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<% else %>
+<p class="nodata"><%=l(:label_no_data)%></p>
+<% end %>
+

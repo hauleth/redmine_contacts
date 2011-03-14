@@ -1,0 +1,58 @@
+<div id="attributes">
+
+
+<%- if Gem.available?('vpim') -%>
+
+<div class="contextual">
+	<%= link_to 'vCard', params.merge({:format => 'vcf'}), :class => 'vcf' %>
+</div>               
+<%- end -%>
+<h3><%= if !@contact.is_company then l(:label_contact) else l(:label_company) end %></h3>  
+
+<table class="attributes vcard">
+	<tr>
+		<th class = "name"><%= l(:field_contact_name) %>:</th><td class="name fn <%= "org" if @contact.is_company %>"><%= h @contact.name %></td>
+	</tr>  
+	<% if !@contact.job_title.blank? %>
+	<tr> <th class = "job_title"><%= !@contact.is_company ? l(:field_contact_job_title) : l(:field_company_field) %>:</th><td class="job_title title"><%= h @contact.job_title %></td></tr>
+	<% end %>
+	<% if !@contact.is_company %>
+	<tr><th class = "company"><%=l(:field_contact_company)%>:</th><td class="company org"><%= h @contact.company %></td></tr>
+	<% end %>
+	<tr>
+		<th class = "address"><%= l(:field_contact_address) %>:</th>
+		<td class="address adr"><%= h @contact.address %>
+				<% if !@contact.address.blank? %>
+					<br>
+					<%= link_to l(:label_show_on_map), "http://maps.google.com/maps?f=q&q=#{h @contact.address}+(#{h @contact.name})&ie=UTF8&om=1"%>
+				<% end %>
+		</td>
+		</tr>
+	<tr class = "tel">
+		<th class = "phone"><%= l(:field_contact_phone) %>:</th>
+		<td class="phone value"> 
+		<% @contact.phones.each do |phone| %>   
+			<%= h phone %> <br>
+		 <% end %>   
+		</td>
+	</tr>
+	<tr>
+		<th class = "email"><%= l(:field_contact_email) %>:</th>
+		<td class="email value">
+			<% @contact.emails.each do |email| %>   
+				<%= mail_to email %> <br>
+			 <% end %>   
+		</td>
+	</tr>
+	<tr>
+		<th class = "website"><%= l(:field_contact_website) %>:</th><td class="website url"><%= link_to @contact.website, @contact.website %></td>
+	</tr>   
+	<% if !@contact.skype_name.blank? %>
+	<tr> <th class = "skype"><%= l(:field_contact_skype) %>:</th><td class="skype"><%=skype_to @contact.skype_name %></td> </tr>
+	<% end %>
+	<% if !@contact.birthday.blank? %>
+	<tr> <th class = "birthday"><%= l(:field_birthday) %>:</th><td class="birthday bday"><%= format_date(@contact.birthday) %></td> </tr>
+	<% end %>
+</table>
+
+</div>            

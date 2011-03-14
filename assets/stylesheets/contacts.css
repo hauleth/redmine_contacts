@@ -1,0 +1,261 @@
+div.contact {background:#f4e9f2; padding:6px; margin-bottom:6px;border: 1px solid #d7d7d7;}
+div.deal {background:#edfff2; padding:6px; margin-bottom:6px;border: 1px solid #d7d7d7;}
+form#add_task_form {background:#ffffff; display: block; padding:6px; margin-bottom:6px;border: 1px solid #d7d7d7; width: 92%;}     
+
+#sidebar{ float: right; width: 30%; position: relative; z-index: 9; min-height: 600px; padding: 0; margin: 0;}
+* html #sidebar{ width: 30%; }
+#sidebar h3{ font-size: 14px; margin-top:14px; color: #666;  }
+#sidebar hr{ width: 100%; margin: 0 auto; height: 1px; background: #ccc; border: 0; }
+* html #sidebar hr{ width: 95%; position: relative; left: -6px; color: #ccc; }
+
+#content { width: 67%; background-color: #fff; margin: 0px; border-right: 1px solid #ddd; padding: 6px 10px 10px 10px; z-index: 10; }
+* html #content{ width: 67%; padding-left: 0; margin-top: 0px; padding: 6px 10px 10px 10px;}
+html>body #content { min-height: 600px; } 
+* html body #content { height: 600px; } /* IE */
+
+div.add-note {margin-left: 5px;  margin-right: 6px;}
+div.add-note textarea.wiki-edit {margin-bottom: 10px; width: 100%;}
+div.add-note p {margin-bottom: 0px; margin-top: 5px;}
+
+div#sidebar div.contextual {
+	margin-right: 8px;
+}
+
+div#contact_issues {
+	margin-right: 4px;
+}
+
+/* note-data*/
+
+span.note-info {
+	font-size: 11px;
+	margin: 0px;
+	padding: 0px;
+	line-height: 1.5;
+	color: rgb(119, 119, 119);
+}
+
+table.note_data, table.related_deals {
+	width: 100%;
+}
+
+table.note_data td.name div.wiki {
+	margin: 5px 0px 0px 0px;     
+}
+     
+table.note_data td.avatar {            
+	padding-right: 4px;  
+	padding-left: 0px;
+}
+
+table.note_data td.name {
+	padding-left: 0px;       
+}
+
+table.subject_header {
+	width: 100%;
+}
+
+table.subject_header td.avatar {
+	vertical-align: top;  
+  vertical-align: top;
+  text-align: right;
+  width: 57px;
+} 
+
+table.subject_header td.subject_info {
+  padding-left: 15px;
+  padding-right: 15px;
+  border-left: 1px solid #D7D7D7;   
+	min-width: 200px;     
+	width: 200px; 
+}
+
+table.subject_header td.subject_info ul {
+	list-style: none;    
+	padding-left: 0px;
+}
+
+table.subject_header td.subject_info li {
+  line-height: 20px;
+  white-space: nowrap;
+}      
+
+.icon-phone { background-image: url(../images/telephone.png); }     
+.icon-email { background-image: url(../images/email.png); }     
+
+                           
+table.note_data a.delete:hover {opacity: 1;}  
+table.note_data a.delete {opacity: 0.4;}  
+
+table.note_data td.name h4 {
+	letter-spacing: -1px;
+	margin: 7px 0 0 0;
+	padding: 0;
+	line-height: 1.1em;    
+}
+table.note_data h4 { margin-top: 5px; margin-bottom: 0px;}
+table.note_data td.avatar { vertical-align: top; width: 38px; padding-top: 10px;}    
+
+
+/********************/
+/*		Search		*/
+/********************/
+div.search_and_filters {
+	margin-bottom: 10px;
+}
+
+div.live_search  {
+	font-size: 16px;
+	
+}
+
+div.live_search input {
+	font-size: 16px;
+	
+}
+
+
+/* Tags*/
+
+.tags {
+	margin-top: 5px;
+}
+
+.tags a img { white-space: nowrap; vertical-align: bottom;}
+
+span.tag a {
+	background-color: grey;
+	color: white;
+	padding: 3px 4px;
+	font-size: 10px;
+	/*	display: block;*/
+	white-space: nowrap;
+	line-height:  2em;
+} 
+
+span.tag a:hover {
+	background-color: silver;
+	text-decoration: none;
+	color: black;
+}
+
+span.tag a.selected:hover {
+  background-color: #eee;  
+}
+
+span.tag a.selected {
+  background-color: #eee;   
+	color: black;
+}
+
+
+div#tags_data span.contextual {float: none; padding-left: 0px;}
+
+
+h2 span.tag a {
+	font-size: inherit;
+	/*	display: block;*/
+} 
+
+#responsible_user ul {margin: 0;  padding: 0;}
+#responsible_user li {list-style-type:none; margin: 3px 2px 0px 0px; padding: 0px 0px 0px 0px;}
+#responsible_user select {width: 95%; display: block;}
+#responsible_user a.delete {opacity: 0.4;}
+#responsible_user a.delete:hover {opacity: 1;}
+#responsible_user img.gravatar {vertical-align: middle;margin: 0 4px 2px 0;}
+
+/* Contacts list*/
+table.index {
+	border-top: 1px solid rgb(239, 239, 239);
+	width: 100%;
+}
+
+table.index td {
+  vertical-align: top;
+  width: 50%;
+  color: #666;
+  font-size: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #efefef;
+}
+
+div.avatar_subject a img {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+div.avatar_subject div.info {
+	margin-left: 50px;
+}
+
+div.avatar_subject h1 {
+	font-size: 20px;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}         
+
+div.avatar_subject h1.deal_name {
+	font-size: 16px;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+div.avatar_subject h1.selected { background-color: #ffb;}
+div.avatar_subject h2.selected { background-color: #ffb;}
+
+div.avatar_subject h2 {
+	font-size: 13px;
+	color: #777;
+	font-weight: normal;
+	line-height: 140%;
+	padding: 0;
+	margin: 0;
+	background: none;
+	border: none;
+}
+
+div.Right div.avatar_subject div.info {
+	padding-top: 3px;
+	margin-left: 42px;
+}
+/*#edit_tags_form {display: block;	margin-top: 10px;}*/
+.notes div.contextual {vertical-align: top;}
+
+/*Deals*/
+
+div#deal-status {
+	margin-top: 4px;
+}         
+
+div.deal-sum {
+	margin-bottom: 4px;
+}
+
+table.related_deals td.name h4 { letter-spacing: -1px; margin: 0px 0 4px 0; padding: 0; line-height: 1.1em;} 
+
+div#deal-status span.contextual {float: none; padding-left: 0px;}   
+
+span.deal-status {
+	padding: 3px 4px;
+	font-size: 10px;
+	/*	display: block;*/
+	white-space: nowrap; 
+	margin-right: 4px;
+}
+            
+dt.contact-note { background-image: url(../images/ticket_note.png); }    
+
+.icon-add-deal { background-image: url(../images/money.png); }  
+.icon-add-employee { background-image: url(../images/user_suit.png); }       
+
+/* Thumbnails*/ 
+div.wiki img.tumbnail {
+	border: 1px solid #D7D7D7;
+	height: 150px;
+	padding: 4px;
+	vertical-align: middle;
+	width: 150px;          
+}

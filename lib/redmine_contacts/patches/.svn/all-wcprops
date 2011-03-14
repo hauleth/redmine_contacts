@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/repository/!svn/ver/65/redmine/redmine_contacts/trunk/lib/redmine_contacts/patches
+END
+contacts_issue_patch.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/repository/!svn/ver/65/redmine/redmine_contacts/trunk/lib/redmine_contacts/patches/contacts_issue_patch.rb
+END

@@ -1,0 +1,101 @@
+cs:
+  contacts_title: Kontakty
+  
+  label_contacts_view_all: Zobraz všechny kontakty
+  label_contact_files: Soubory
+  label_task_plural: Úkoly
+  label_contact_background_info: Poznámky o kontaktu
+  label_contact: Kontakt
+  label_company: Společnost   
+  label_contact_plural: Kontakty
+  label_contact_information: Informace o kontaktu
+  label_contact_edit_information: Úprava kontaktních informací
+  label_edit_tags: Upravit štítky
+  label_contact_view: Zobrazit
+  label_contact_list: Seznam
+  label_contact_new: Nový
+  label_at_company: v
+  label_last_notes: Poslední poznámky
+  label_tags_plural: Štítky    
+  label_multi_tags_plural: Select multilpe tags
+  label_single_tag_mode: Single tag
+  label_multiple_tags_mode: Multiple tags
+  label_contact_tag: Štítek
+  label_time_ago: před
+  label_add_note_plural: Přidat poznámky k
+  label_note_plural: Poznámky
+  label_company_employees: Zaměstnanci
+  label_add_tags_rule: oddělit čárkami
+  label_search: Vyhledat podle jména
+  label_note_for: Poznámka pro
+  label_show_on_map: Zobrazit na mapě
+  label_add_another_phone: přidat telefon  
+  label_contact_note_plural: Všechny poznámky
+  label_remove: smazat
+  label_related_contacts: Související kontakty
+  label_assigned_to: Odpovědný
+  label_issue_added: Issue added
+  label_add_emails_rule: oddělit čárkami
+  label_add_phones_rule: oddělit čárkami
+   
+  label_note_show_extras: Pokročilé (soubory, datum)
+  label_note_hide_extras: Skrýt pokročilé 
+  label_note_added: Poznámka úspěšně pŕidána
+
+  label_deal_plural: Nabídky
+  label_contractor_plural: Zprostředkovatelé
+  label_deal: Nabídka
+  label_deal_new: Nová nabídka
+  label_deal_edit_information: Upravit informace o nabídce
+  label_deal_change_status: Změnit stav
+  label_deal_pending: Čeká
+  label_deal_won: Přijata
+  label_deal_lost: Odmítnuta
+  
+
+  field_note_date: Datum poznámky
+  
+  field_deal_name: Jméno
+  field_deal_background: Poznámky k nabídce
+  field_deal_contact: Contact    
+  field_deal_price: Sum  
+  field_price: Sum  
+  
+  field_contact_avatar: Avatar
+  field_contact_is_company: Kontakt na společnost
+  field_contact_name: Jméno
+  field_contact_last_name: Příjmení
+  field_contact_first_name: Jméno
+  field_contact_middle_name: Prostřední jméno
+  field_contact_job_title: Pracovní pozice
+  field_contact_company: Společnost
+  field_contact_address: Adresa
+  field_contact_phone: Telefon
+  field_contact_email: Email
+  field_contact_website: Webová stránka
+  field_contact_skype: Skype
+  field_contact_status: Status   
+  field_contact_background: Poznámky ke kontaktu   
+  field_contact_tag_names: Štítky 
+  field_first_name: Jméno
+  field_last_name: Příjmení
+  field_company: Společnost
+  field_birthday: Narozeniny     
+  field_contact_department: Oddělení
+  
+  field_company_field: Industry 
+  
+  button_add_note: Přidat poznámku
+  notice_successful_save: Uloženo
+  notice_successful_add: Vytvořeno
+  notice_unsuccessful_save: Chyba při uložení
+  
+  project_module_contacts_module: Kontakty
+  
+  permission_view_contacts: Zobrazit kontakty
+  permission_edit_contacts: Upravit kontakty
+  permission_delete_contacts: Smazat kontakty
+  permission_view_deals: Zobrazit nabídky
+  permission_edit_deals: Upravit nabídky
+  permission_delete_deals: Smazat nabídky
+  permission_add_notes: Přidat poznámky   

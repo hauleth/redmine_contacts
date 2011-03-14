@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/repository/!svn/ver/37/redmine/redmine_contacts/trunk/app/views/mailer
+END
+note_added.text.plain.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/repository/!svn/ver/30/redmine/redmine_contacts/trunk/app/views/mailer/note_added.text.plain.rhtml
+END
+note_added.text.html.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/repository/!svn/ver/30/redmine/redmine_contacts/trunk/app/views/mailer/note_added.text.html.rhtml
+END
+issue_connected.text.plain.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/repository/!svn/ver/37/redmine/redmine_contacts/trunk/app/views/mailer/issue_connected.text.plain.rhtml
+END
+issue_connected.text.html.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/repository/!svn/ver/37/redmine/redmine_contacts/trunk/app/views/mailer/issue_connected.text.html.rhtml
+END

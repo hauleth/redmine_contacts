@@ -1,0 +1,8 @@
+	<h3><%= l(:label_task_plural) %></h3>  
+	<%= link_to l(:label_contacts_view_all), { :controller => 'contacts', :action => 'index', :project_id => @project} %>
+	 | 
+	<%= link_to l(:label_deal_plural), { :controller => 'deals', :action => 'index', :project_id => @project} %>
+	 | 
+	<%= link_to l(:label_issue_plural), { :controller => 'contacts', :action => 'contacts_issues', :project_id => @project} %>
+	 |
+	<%= link_to l(:label_contact_note_plural), { :controller => 'contacts', :action => 'contacts_notes', :project_id => @project} %>

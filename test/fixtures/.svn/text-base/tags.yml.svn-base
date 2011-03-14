@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+tag_one:
+  id: 1
+  name: main
+  color: '#1222A4'
+tag_two:
+  id: 2
+  name: test
+  color: '#FF22A4'

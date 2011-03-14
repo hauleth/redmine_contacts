@@ -1,0 +1,73 @@
+<%  if !@issue.blank? && (User.current.allowed_to?(:view_contacts, @project) || User.current.admin?)  %>
+
+
+
+<div id="issue_contacts">  
+	<style type="text/css">
+		#issue_contacts ul {margin: 0;  padding: 0;}
+		#issue_contacts li {list-style-type:none; margin: 0px 2px 0px 0px; padding: 0px 0px 0px 0px;}
+		#issue_contacts select {width: 95%; display: block;}
+		#issue_contacts a.delete {opacity: 0.4;}
+		#issue_contacts a.delete:hover {opacity: 1;}
+		#issue_contacts img.gravatar {vertical-align: middle; margin: 0 4px 2px 0;} 
+	</style>
+	
+	<div class="contextual">           
+		<%= link_to_remote l(:button_add), 
+		                   :url => {:controller => 'contacts',
+		                            :action => 'add_contact_to_issue',
+									:project_id => @project,
+		                            :issue_id => @issue} if User.current.allowed_to?(:edit_contacts, @project) %>
+
+	 </div>
+
+	
+	<h3><%= l(:label_contact_plural) %> </h3>  
+	
+	<% unless !(@show_form == "true") %>
+     	<% form_remote_tag( 
+                	   :url => {:controller => 'contacts',
+              	              	:action => 'add_contact_to_issue',
+         	                    :issue_id => @issue,
+                        		:project_id => @project},
+       	             :method => :post,
+      	             :html => {:id => 'add-contact-form'}) do |f| %>
+		<p><%= select_tag :id, options_for_select(Contact.find(:all, :conditions => {:project_id => @project}).sort!{|x, y| x.name <=> y.name }.collect {|m| [m.name, m.id]}), :prompt => "--- #{l(:actionview_instancetag_blank_option)} ---" %>
+
+		<%= submit_tag l(:button_add) %>
+		<%= toggle_link l(:button_cancel), 'add-contact-form'%></p>
+		<% end %>
+	<% end %>
+    
+    
+	<ul>
+	    <% @issue.contacts.each do |contact| %>   
+		<li>  
+		<%= avatar_to contact, :size => "16" %>	
+		<%= link_to_source contact %>
+		<%= "(#{contact.job_title}) " unless contact.job_title.blank? %>     
+		<% if  User.current.allowed_to?(:delete_contacts, @project) %>
+			<%= link_to_remote(image_tag('delete.png'), 
+					:url => {   :controller => 'contacts',
+								:action => 'destroy_contact_from_issue',
+								:issue_id => @issue, 
+								:project_id => @project,
+								:id => contact.id}, 
+					:method => :delete, 
+					:confirm => l(:text_are_you_sure), 
+  				 	:html => {:class  => "delete",
+	   						  :title => l(:button_delete) }) %>
+					
+		 <% end %>   			
+		 </li>   			
+		<% end %>    
+	</ul>
+
+</div>    
+
+
+
+<% end %>
+
+
+

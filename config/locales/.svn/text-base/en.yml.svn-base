@@ -1,0 +1,102 @@
+en:
+  contacts_title: Contacts
+  
+  label_contacts_view_all: View all contacts
+  label_contact_files: Files
+  label_task_plural: Tasks
+  label_contact_background_info: Background info
+  label_contact: Person
+  label_company: Company   
+  label_contact_plural: Contacts List   
+  label_contact_information: Contact Information
+  label_contact_edit_information: Editing Contact Information
+  label_edit_tags: Edit tags
+  label_contact_view: View
+  label_contact_list: List
+  label_contact_new: New
+  label_at_company: at
+  label_last_notes: Latest notes
+  label_tags_plural: Tags     
+  label_multi_tags_plural: Select multilpe tags
+  label_single_tag_mode: Single tag
+  label_multiple_tags_mode: Multiple tags
+  label_contact_tag: Tag
+  label_time_ago: ago
+  label_add_note_plural: Add note to 
+  label_note_plural: Notes
+  label_company_employees: Employees
+  label_add_tags_rule: devide by commas
+  label_search: Search by name
+  label_note_for: Note for
+  label_show_on_map: Show on map   
+  label_add_another_phone: add phone   
+  label_contact_note_plural: All notes  
+  label_remove: delete        
+  label_related_contacts: Related contacts    
+  label_assigned_to: Responsible
+  label_issue_added: Issue added
+  label_add_emails_rule: divide by commas
+  label_add_phones_rule: divide by commas  
+  label_add_employee: New employee
+   
+  label_note_show_extras: Advanced (files, date)
+  label_note_hide_extras: Hide advanced       
+  label_note_added: The note is successfully added
+
+  label_deal_plural: Deals
+  label_contractor_plural: Contactors
+  label_deal: Deal     
+  label_deal_new: New deal
+  label_deal_edit_information: Edit deal information   
+  label_deal_change_status: Change status 
+  label_deal_pending: Pending
+  label_deal_won: Won
+  label_deal_lost: Lost 
+  
+
+  field_note_date: Note date
+  
+  field_deal_name: Name
+  field_deal_background: Background
+  field_deal_contact: Contact    
+  field_deal_price: Sum  
+  field_price: Sum  
+  
+  field_contact_avatar: Avatar
+  field_contact_is_company: Company
+  field_contact_name: Name
+  field_contact_last_name: Last Name
+  field_contact_first_name: First Name
+  field_contact_middle_name: Middle Name
+  field_contact_job_title: Job title
+  field_contact_company: Company
+  field_contact_address: Address
+  field_contact_phone: Phone
+  field_contact_email: Email
+  field_contact_website: Website
+  field_contact_skype: Skype
+  field_contact_status: Status   
+  field_contact_background: Background   
+  field_contact_tag_names: Tags   
+  field_first_name: Name
+  field_last_name: Last name
+  field_company: Company 
+  field_birthday: Birthday      
+  field_contact_department: Department
+  
+  field_company_field: Industry 
+  
+  button_add_note: Add note  
+  notice_successful_save: Saved successfully 
+  notice_successful_add: Successfully created
+  notice_unsuccessful_save: Save problems
+  
+  project_module_contacts_module: Contacts
+  
+  permission_view_contacts: View contacts
+  permission_edit_contacts: Edit contacts
+  permission_delete_contacts: Delete contacts
+  permission_view_deals: View deals
+  permission_edit_deals: Edit deals
+  permission_delete_deals: Delete deals   
+  permission_add_notes: Add notes   

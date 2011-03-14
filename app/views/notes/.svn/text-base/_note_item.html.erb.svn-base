@@ -1,0 +1,48 @@
+<div id=<%="note_#{note_item.id}"%>>
+	<table class="note_data">
+		<tr>    
+			
+			<% if show_info %>
+			<td class="avatar"><%= link_to avatar_to(note_item.source, :size => "32"), contact_url(note_item.source), :id => "avatar" %></td>
+			<td class="name">  
+				<div class="contextual">
+ 			      <%= link_to_remote(image_tag('delete.png'), 
+						:url => {:action => 'destroy_note', :note_id => note_item}, 
+						:method => :delete, 
+						:confirm => l(:text_are_you_sure),	
+						:html => {:class  => "delete", :title => l(:button_delete) }) if note_item.destroyable_by?(User.current) %>
+			    </div>
+				<h4>   
+					<%= "#{note_item.subject} - " unless note_item.subject.blank? %> 
+					<%= link_to_source note_item.source %>, 
+					<%= authoring note_item.created_on, note_item.author %>
+				</h4>
+				<div class="wiki">    
+					<%= textilizable(note_item, :content) %>     
+					<%= link_to_attachments note_item, :author => false  %>
+				</div>
+			</td>
+			<% else %>
+			<td class="name">  
+				<div class="contextual">
+			      <%= link_to_remote(image_tag('delete.png'), 
+						:url => {:action => 'destroy_note', :note_id => note_item}, 
+						:method => :delete, 
+						:confirm => l(:text_are_you_sure),	
+						:html => {:class  => "delete", :title => l(:button_delete) }) if note_item.destroyable_by?(User.current) %>
+			    </div>
+				
+				<h4>    
+				    <%= "#{note_item.subject} - " unless note_item.subject.blank? %>  
+					<%= authoring note_item.created_on, note_item.author %>
+				</h4>
+				<div class="wiki">      
+					<%= textilizable(note_item, :content) %>     
+					<%= link_to_attachments note_item, :author => false  %>
+				</div>
+			</td>
+			<% end %>
+		</tr>
+	</table>
+
+</div>
