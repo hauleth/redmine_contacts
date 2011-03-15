@@ -1,3 +1,0 @@
-<% notes.each do |note| %>   
-<%= render :partial => 'notes/note_data', :locals => {:limit => 100}, :object => note %> 
-<% end %>

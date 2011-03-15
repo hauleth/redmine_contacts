@@ -7,15 +7,13 @@ require 'redmine_contacts/patches/contacts_issue_patch'
 require 'redmine_contacts/wiki_macros/contacts_wiki_macros'  
 require 'redmine_contacts/hooks/show_issue_contacts_hook'       
 
-RAILS_DEFAULT_LOGGER.info 'Starting Contact plugin for RedMine'
+RAILS_DEFAULT_LOGGER.info 'Starting Contact plugin for Redmine'
 
 Redmine::Plugin.register :contacts do
   name 'Contacts plugin'
-  author 'Kirill Bezrukov'
+  author 'Łukasz Niemier'
   description 'This is a plugin for Redmine that can be used to track basic contacts information'
-  version '1.2.0'
-
-  author_url 'mailto:kirill.bezrukov@gmail.com' if respond_to? :author_url
+  version '0.1.0'
 
   requires_redmine :version_or_higher => '0.9.0'   
   

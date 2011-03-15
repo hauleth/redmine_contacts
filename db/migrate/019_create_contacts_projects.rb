@@ -7,13 +7,10 @@ class CreateContactsProjects < ActiveRecord::Migration
 
     Contact.find(:all).each do |contact|
       contact.projects << Project.find(contact.project_id)
-    end      
-    
+    end
   end
 
   def self.down
     drop_table :contacts_projects 
-    
-  end      
-                                                  
+  end                                                
 end         

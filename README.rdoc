@@ -1,17 +1,31 @@
 = Contacts plugin
 
+Features:
+
+    * Common contacts list
+    * Project contacts list
+    * Contact notes
+    * Contact attaches
+    * Issues related to contacts (in contact page and in issue page)
+    * Basic deals info
+    * Tags
+    * English, Russian, Chines, Czech, German, French, Dutch and Polish (still in development) translations
+    * Contacts wiki macros
+    * Email notifications
+    * REST API
+    * Export contact to vCard (vpim gem)
+
 == Install
 
-* Copy redmine_contacts_plugin to vendor/plugins on your redmine path or
- @svn co http://hgftr.ru/svn/repository/redmine/redmine_contacts/trunk/ redmine_contacts@
-* Run rake db:migrate_plugins RAILS_ENV=production   
+* Copy redmine_contacts_plugin to vendor/plugins on your Redmine path
+* Run +rake db:migrate_plugins RAILS_ENV=production+   
 
 May be conflict with other tags realizations
 Conflicted with redmine_customer plugin
 
 == Uninstall
 
-<pre>
-rake db:migrate:plugin NAME=redmine_contacts VERSION=0 RAILS_ENV=production 
-rm -r vendor/plugins/redmine_contacts
-</pre>
+  rake db:migrate:plugin NAME=redmine_contacts VERSION=0 RAILS_ENV=production 
+  rm -r vendor/plugins/redmine_contacts
+
+Based on Kirill Bezrukov's Contacts plugin.

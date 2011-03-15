@@ -1,49 +1,0 @@
-10
-
-dir
-68
-http://hgftr.ru/svn/repository/redmine/redmine_contacts/trunk/app/views
-http://hgftr.ru/svn/repository
-
-
-
-2011-03-09T21:02:23.512327Z
-68
-root
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-65496754-73ef-4258-a299-84570d2fbdd2
-
-layouts
-dir
-
-common
-dir
-
-deals
-dir
-
-notes
-dir
-
-mailer
-dir
-
-issues
-dir
-
-contacts
-dir
-

@@ -1,6 +1,0 @@
-<h2><%= l(:label_deal_new) %></h2>
-
-<% labelled_tabular_form_for :deal, @deal, :url => {:action => 'create', :project_id => @project} do |f|  %>
-  <%= render :partial => 'form', :locals => {:f => f}  %>
-  <%= submit_tag l(:button_save) -%>
-<% end -%>
