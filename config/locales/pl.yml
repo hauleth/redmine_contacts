@@ -7,22 +7,22 @@ pl:
   label_contact_background_info: Background info
   label_contact: Osoba
   label_company: Firma
-  label_contact_plural: Contacts List
+  label_contact_plural: Lista kontaktów
   label_contact_information: Dane kontaktowe
-  label_contact_edit_information: Editing Contact Information
-  label_edit_tags: Edit tags
+  label_contact_edit_information: Edycja danych kontaktowych
+  label_edit_tags: Edytuj tagi
   label_contact_view: Pokaż
   label_contact_list: Lista
   label_contact_new: Nowy
   label_at_company: at
-  label_last_notes: Latest notes
+  label_last_notes: Ostatnie notatki
   label_tags_plural: Tagi     
   label_multi_tags_plural: Select multilpe tags
   label_single_tag_mode: Single tag
   label_multiple_tags_mode: Multiple tags
   label_contact_tag: Tag
   label_time_ago: temu
-  label_add_note_plural: Add note to 
+  label_add_note_plural: Dodaj notatkę do 
   label_note_plural: Notatki
   label_company_employees: Pracownicy
   label_add_tags_rule: oddzielone przecinkami
@@ -33,7 +33,7 @@ pl:
   label_contact_note_plural: Wszystkie notatki  
   label_remove: usuń        
   label_related_contacts: Powiązane kontakty 
-  label_assigned_to: Responsible
+  label_assigned_to: Odpowiedzialny
   label_issue_added: Issue added
   label_add_emails_rule: oddzielone przecinkami
   label_add_phones_rule: oddzielone przecinkami
@@ -48,8 +48,8 @@ pl:
   label_deal: Deal     
   label_deal_new: New deal
   label_deal_edit_information: Edit deal information   
-  label_deal_change_status: Change status 
-  label_deal_pending: Pending
+  label_deal_change_status: Zmień status
+  label_deal_pending: Oczekuje
   label_deal_won: Won
   label_deal_lost: Lost 
   
@@ -58,9 +58,9 @@ pl:
   
   field_deal_name: Name
   field_deal_background: Background
-  field_deal_contact: Contact    
-  field_deal_price: Sum  
-  field_price: Sum  
+  field_deal_contact: Kontakt    
+  field_deal_price: Suma  
+  field_price: Suma  
   
   field_contact_avatar: Avatar
   field_contact_is_company: Firma
@@ -82,21 +82,21 @@ pl:
   field_last_name: Nazwisko
   field_company: Company 
   field_birthday: Urodziny     
-  field_contact_department: Department
+  field_contact_department: Wydział
   
   field_company_field: Industry 
   
-  button_add_note: Add note  
-  notice_successful_save: Saved successfully 
-  notice_successful_add: Successfully created
-  notice_unsuccessful_save: Save problems
+  button_add_note: Dodaj notatkę  
+  notice_successful_save: Zapisano pomyślnie 
+  notice_successful_add: Utworzono pomyślnie 
+  notice_unsuccessful_save: Błędy w czasie zapisu
   
   project_module_contacts_module: Kontakty
   
-  permission_view_contacts: View contacts
-  permission_edit_contacts: Edit contacts
-  permission_delete_contacts: Delete contacts
+  permission_view_contacts: Pokaż kontakty
+  permission_edit_contacts: Edytuj kontakty
+  permission_delete_contacts: Usuń kontakty
   permission_view_deals: View deals
   permission_edit_deals: Edit deals
   permission_delete_deals: Delete deals   
-  permission_add_notes: Add notes   
+  permission_add_notes: Dodaj notatki   
