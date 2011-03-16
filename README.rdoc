@@ -2,23 +2,23 @@
 
 Features:
 
- * Common contacts list
- * Project contacts list
- * Contact notes
- * Contact attaches
- * Issues related to contacts (in contact page and in issue page)
- * Basic deals info
- * Tags
- * English, Russian, Chines, Czech, German, French, Dutch and Polish (still in development) translations
- * Contacts wiki macros
- * Email notifications
- * REST API
- * Export contact to vCard (vpim gem)
+* Common contacts list
+* Project contacts list
+* Contact notes
+* Contact attaches
+* Issues related to contacts (in contact page and in issue page)
+* Basic deals info
+* Tags
+* English, Russian, Chines, Czech, German, French, Dutch and Polish (still in development) translations
+* Contacts wiki macros
+* Email notifications
+* REST API
+* Export contact to vCard (vpim gem)
 
 == Install
 
- * Copy redmine_contacts_plugin to vendor/plugins on your Redmine path
- * Run +rake db:migrate_plugins RAILS_ENV=production+   
+* Copy redmine_contacts_plugin to vendor/plugins on your Redmine path
+* Run +rake db:migrate_plugins RAILS_ENV=production+   
 
 May be conflict with other tags realizations
 Conflicted with redmine_customer plugin
